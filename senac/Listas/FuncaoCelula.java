@@ -40,4 +40,37 @@ public class FuncaoCelula {
 		return aux;
 	}
 	
+	public String addSpaces(String s) {
+        	
+            String saida = "";
+            for (int i = 0; i < s.length(); i++) {
+                if (isOperator(s.charAt(i)) && s.charAt(i - 1) != ' ') {
+                	
+                	saida += " "+s.charAt(i)+" ";
+                	//System.out.println("yeap"+saida);
+                } else {
+                	saida += s.charAt(i);
+                	//System.out.println("nope"+saida);
+                }
+            }
+            //excecao, uma celula tem possuir numeros
+            
+            return saida;
+    	}
+        
+        public boolean isOperator(Character c) {
+        	
+        	switch (c) {
+			case '+':
+			case '-':
+			case '*':
+			case '/':
+			case '(':
+			case ')':
+				return true;
+			}
+        	
+        	return false;
+        }
+	
 }
