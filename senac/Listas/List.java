@@ -137,6 +137,7 @@ public class List {
 			//System.out.println("firstNode : "+firstNode+", lastNode : "+lastNode+".\n");
 			
 			dados = ""+current.getData()+"";
+			dados = new FuncaoCelula().addSpaces(dados);
 			//esta retornando null em RPNConverter
 			aux += current.getIndex()+": "+RPNConverter(dados, list)+".\t";
 			current = current.next();
